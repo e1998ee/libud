@@ -4612,6 +4612,9 @@ function library:init()
     library.flags.watermark_enabled = true
     library.flags.watermark_x = 44.7
     library.flags.watermark_y = 1.1
+    if self.watermark and self.watermark.objects and self.watermark.objects.background then
+        self.watermark.objects.background.Visible = true
+    end
     self:SetTheme(library.theme);
     self:SetOpen(true);
     self.hasInit = true
